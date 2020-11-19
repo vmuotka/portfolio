@@ -1,0 +1,13 @@
+@tailwind base;
+
+html {
+  scroll-behavior: smooth;
+}
+
+main > div > * {
+  padding-top: 80px;
+}
+
+@tailwind components;
+
+@tailwind utilities;
