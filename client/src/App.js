@@ -1,14 +1,16 @@
 // project components
 import Navigation from './components/Navigation'
-import Home from './views/Home'
+import Biography from './views/Biography'
+import Skills from './views/Skills'
 
 const App = () => {
   return (
-    <div>
+    <div className='mb-8'>
       <Navigation />
-      <main className='mx-4'>
+      <main className='mx-4 break-words'>
         <div className='w-full sm:w-4/5 mx-auto'>
-          <Home />
+          <Biography />
+          <Skills />
         </div>
       </main>
     </div>
