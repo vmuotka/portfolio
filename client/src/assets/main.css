@@ -546,6 +546,10 @@ html, body {
 
 main > div > * {
   padding-top: 80px;
+  margin-left: -99rem;
+  margin-right: -99rem;
+  padding-left: 99rem;
+  padding-right: 99rem;
 }
 
 .container {

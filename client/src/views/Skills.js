@@ -62,7 +62,7 @@ const Skills = () => {
   ]
 
   return (
-    <div id='skills' className='mt-16 py-20 text-center'>
+    <div id='skills' className='mt-16 py-20 text-center even:bg-primary-50'>
       <h1 className='text-5xl text-primary-700 font-semibold text-center'>Skills</h1>
       <div className='grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-12 mt-8'>
         {

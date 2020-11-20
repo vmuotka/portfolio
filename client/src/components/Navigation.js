@@ -18,7 +18,7 @@ const Navigation = () => {
   useOutsideListener(wrapperRef, () => { setShowNav(false) })
 
   return (
-    <nav ref={wrapperRef} className='fixed top-0 left-0 z-50 w-full bg-primary-400 flex flex-wrap justify-center items-center select-none py-4'>
+    <nav ref={wrapperRef} className='fixed top-0 left-0 z-50 w-full bg-primary-400 flex flex-wrap justify-center items-center select-none py-4 shadow'>
       <div className='block sm:hidden'>
         <button
           onClick={() => setShowNav(!showNav)}
