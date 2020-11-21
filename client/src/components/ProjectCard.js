@@ -13,13 +13,10 @@ const Project = (props) => {
 
   const [fileExists, setFileExists] = useState(false)
   useEffect(() => {
-    fetch(`/project/${props.title.toLowerCase()}.md`)
+    fetch(`/project/${props.title.toLowerCase()}.md`, { method: 'HEAD' })
       .then(data => {
-        return data.text()
-      })
-      .then(text => {
-        // this is a hack to not create error logs to console when the file does not exist
-        setFileExists(!text.includes('<!DOCTYPE html>'))
+        console.log(data)
+        setFileExists(data.ok)
       })
   }, [setFileExists, props.title])
 
