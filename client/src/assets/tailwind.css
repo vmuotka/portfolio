@@ -8,8 +8,8 @@ html, body {
   overflow-x: hidden;
 }
 
-main > div > * {
-  padding-top: 80px;
+div#homepage > div {
+  padding-top: 6em;
   margin-left: -99rem;
   margin-right: -99rem;
   padding-left: 99rem;
@@ -19,3 +19,37 @@ main > div > * {
 @tailwind components;
 
 @tailwind utilities;
+
+/* apply tailwindcss classes to html code created by react-markdown */
+@layer components {
+  .markdown h1 {
+    @apply text-4xl text-primary-700 font-semibold
+  }
+  .markdown h2 {
+    @apply text-3xl text-primary-600 font-semibold
+  }
+  .markdown h3 {
+    @apply text-2xl text-primary-500 font-medium
+  }
+  .markdown p {
+    @apply text-xl text-gray-600
+  }
+  .markdown ul {
+    @apply text-gray-600 text-lg list-disc ml-10
+  }
+  .markdown ol {
+    @apply text-gray-600 text-lg list-decimal ml-10
+  }
+  .markdown img {
+    @apply px-10 w-auto
+  }
+  .markdown table {
+    @apply mx-auto text-lg text-gray-700
+  }
+  .markdown thead {
+    @apply text-xl
+  }
+  .markdown td, .markdown th {
+    @apply px-4 py-1
+  }
+}

@@ -47,7 +47,7 @@ const Skills = () => {
       title: 'PHP',
       items: [
         'server-side rendering',
-        'backend APIs',
+        'back-end APIs',
       ]
     },
     {

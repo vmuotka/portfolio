@@ -36,7 +36,7 @@ const Biography = () => {
   }
 
   return (
-    <div id='biography' className='mt-10 flex flex-col sm:space-x-6 space-y-4 lg:flex-row even:bg-primary-50'>
+    <div id='biography' className='mt-10 flex flex-col sm:space-x-6 space-y-4 lg:flex-row even:bg-primary-50 text-left'>
       <div className='w-full lg:w-5/12 text-center text-gray-600 text-xl'>
         <img
           className='w-52 mx-auto rounded-full mb-4'
@@ -63,7 +63,7 @@ const Biography = () => {
           I am a third year <span className='font-semibold text-gray-700'>Business Information Technology</span> student from Finland. Throughout school, web development has been at the center of my attention. Recently I have been focusing on <span className='font-semibold text-gray-700'>JavaScript</span> frameworks and libraries, such as <span className='font-semibold text-gray-700'>React</span>.
         </p>
         <p>
-          While I have been focusing on frontend, my projects often include a backend made with <span className='font-semibold text-gray-700'>Node.js</span> for user management and <span className='font-semibold text-gray-700'>MongoDB</span> for data storing.
+          While I have been focusing on front-end, my projects often include a back-end made with <span className='font-semibold text-gray-700'>Node.js</span> for user management and <span className='font-semibold text-gray-700'>MongoDB</span> for data storing.
         </p>
       </div>
     </div>

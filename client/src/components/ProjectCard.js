@@ -1,6 +1,9 @@
 // icons
 import GlobeIcon from '../icons/GlobeIcon'
 import GithubIcon from '../icons/GithubIcon'
+import InfoIcon from '../icons/InfoIcon'
+
+import { Link } from 'react-router-dom'
 
 
 const Project = (props) => {
@@ -21,8 +24,8 @@ const Project = (props) => {
             rel='noreferrer'
           >
             <GlobeIcon className='h-5 inline mr-1 self-center' />
-        Live
-      </a>
+            Live
+          </a>
           <a
             className='text-lg w-min flex text-primary-600 border border-primary-600 hover:bg-primary-600 hover:text-primary-100 font-semibold rounded py-1 px-2'
             href={props.github}
@@ -30,8 +33,15 @@ const Project = (props) => {
             rel='noreferrer'
           >
             <GithubIcon className='h-5 inline mr-1 self-center' />
-        Github
-      </a>
+            Github
+          </a>
+          <Link
+            className='text-lg w-min flex text-primary-600 border border-primary-600 hover:bg-primary-600 hover:text-primary-100 font-semibold rounded py-1 px-2'
+            to={`/project/${props.title.toLowerCase()}`}
+          >
+            <InfoIcon className='h-5 inline mr-1 self-center' />
+            Details
+          </Link>
         </span>
       </div>
     </div>

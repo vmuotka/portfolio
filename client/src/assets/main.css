@@ -544,8 +544,8 @@ html, body {
   overflow-x: hidden;
 }
 
-main > div > * {
-  padding-top: 80px;
+div#homepage > div {
+  padding-top: 6em;
   margin-left: -99rem;
   margin-right: -99rem;
   padding-left: 99rem;
@@ -584,6 +584,82 @@ main > div > * {
   .container {
     max-width: 1536px;
   }
+}
+
+.markdown h1 {
+  font-weight: 600;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(180, 83, 9, var(--tw-text-opacity))
+}
+
+.markdown h2 {
+  font-weight: 600;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(217, 119, 6, var(--tw-text-opacity))
+}
+
+.markdown h3 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgba(245, 158, 11, var(--tw-text-opacity))
+}
+
+.markdown p {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgba(71, 85, 105, var(--tw-text-opacity))
+}
+
+.markdown ul {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  list-style-type: disc;
+  margin-left: 2.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(71, 85, 105, var(--tw-text-opacity))
+}
+
+.markdown ol {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  list-style-type: decimal;
+  margin-left: 2.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(71, 85, 105, var(--tw-text-opacity))
+}
+
+.markdown img {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  width: auto
+}
+
+.markdown table {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  --tw-text-opacity: 1;
+  color: rgba(51, 65, 85, var(--tw-text-opacity))
+}
+
+.markdown thead {
+  font-size: 1.25rem;
+  line-height: 1.75rem
+}
+
+.markdown td, .markdown th {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem
 }
 
 .space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -32781,6 +32857,8 @@ main > div > * {
 .animate-bounce {
   animation: bounce 1s infinite;
 }
+
+/* apply tailwindcss classes to html code created by react-markdown */
 
 @media (min-width: 640px) {
   .sm\:container {
