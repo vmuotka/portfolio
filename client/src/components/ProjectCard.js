@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react'
+
 // icons
 import GlobeIcon from '../icons/GlobeIcon'
 import GithubIcon from '../icons/GithubIcon'
@@ -8,6 +10,19 @@ import { Link } from 'react-router-dom'
 
 const Project = (props) => {
   props = props.props
+
+  const [fileExists, setFileExists] = useState(false)
+  useEffect(() => {
+    fetch(`/project/${props.title.toLowerCase()}.md`)
+      .then(data => {
+        return data.text()
+      })
+      .then(text => {
+        // this is a hack to not create error logs to console when the file does not exist
+        setFileExists(!text.includes('<!DOCTYPE html>'))
+      })
+  }, [setFileExists, props.title])
+
   return (
     <div className='flex flex-col md:flex-row space-x-6 space-y-6 md:space-y-0'>
       <img className='w-96 shadow self-center' src={props.cover} alt={`cover for project: ${props.title}`} />
@@ -35,13 +50,16 @@ const Project = (props) => {
             <GithubIcon className='h-5 inline mr-1 self-center' />
             Github
           </a>
-          <Link
-            className='text-lg w-min flex text-primary-600 border border-primary-600 hover:bg-primary-600 hover:text-primary-100 font-semibold rounded py-1 px-2'
-            to={`/project/${props.title.toLowerCase()}`}
-          >
-            <InfoIcon className='h-5 inline mr-1 self-center' />
-            Details
-          </Link>
+          {fileExists &&
+            <Link
+              className='text-lg w-min flex text-primary-600 border border-primary-600 hover:bg-primary-600 hover:text-primary-100 font-semibold rounded py-1 px-2'
+              to={`/project/${props.title.toLowerCase()}`}
+            >
+              <InfoIcon className='h-5 inline mr-1 self-center' />
+              Details
+            </Link>
+          }
+
         </span>
       </div>
     </div>

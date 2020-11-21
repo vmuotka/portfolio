@@ -545,11 +545,16 @@ html, body {
 }
 
 div#homepage > div {
-  padding-top: 6em;
+  padding-top: 8em;
   margin-left: -99rem;
   margin-right: -99rem;
   padding-left: 99rem;
   padding-right: 99rem;
+}
+
+a {
+  --tw-text-opacity: 1;
+  color: rgba(37, 99, 235, var(--tw-text-opacity))
 }
 
 .container {
@@ -636,6 +641,8 @@ div#homepage > div {
 }
 
 .markdown img {
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   width: auto

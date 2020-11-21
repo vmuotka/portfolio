@@ -27,7 +27,7 @@ const Navigation = () => {
     location !== '/' && await history.push('/')
 
     // scrolls to the selected section without pushing to history or having # in the url
-    document.getElementById(e.target.value).scrollIntoView({ block: 'center', behavior: 'smooth' })
+    document.getElementById(e.target.value).scrollIntoView({ block: 'start', behavior: 'smooth' })
   }
 
   return (
@@ -35,7 +35,7 @@ const Navigation = () => {
       <div className='block sm:hidden'>
         <button
           onClick={() => setShowNav(!showNav)}
-          className='text-white hover:text-primary-100 border rounded py-1.5 px-2.5 mr-4 font-lg focus:outline-none'
+          className='text-white hover:text-primary-100 border rounded py-1.5 px-2.5 mr-4 font-lg focus:outline-none active:outline-none'
         >
           <svg
             className='fill-current h-4 w-4'
@@ -48,7 +48,7 @@ const Navigation = () => {
       </div>
       <div>
         <button
-          className='font-mono sm:pr-16 py-4 font-semibold text-3xl text-white hover:text-primary-100 align-middle'
+          className='font-mono sm:pr-16 py-4 font-semibold text-3xl text-white hover:text-primary-100 align-middle focus:outline-none active:outline-none'
           value='biography'
           onClick={handleNav}
         >
@@ -61,7 +61,7 @@ const Navigation = () => {
         {
           navItems.map(item =>
             <button
-              className='block sm:inline px-6 py-2 font-mono font-medium sm:px-2 sm:py-4 text-xl text-white hover:text-primary-100 align-middle'
+              className='block sm:inline px-6 py-2 font-mono font-medium sm:px-2 sm:py-4 text-xl text-white hover:text-primary-100 align-middle focus:outline-none active:outline-none'
               key={item.name}
               value={item.name.toLowerCase()}
               onClick={handleNav}

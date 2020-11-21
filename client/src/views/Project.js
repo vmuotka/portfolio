@@ -18,7 +18,6 @@ const Project = () => {
     fetch(`./${project_name}.md`)
       .then(data => {
         data.text().then(text => {
-          // hack to redirect to homepage if the markdown file was not found
           if (text.includes('<!DOCTYPE html>'))
             history.push('/')
 
@@ -41,7 +40,7 @@ const Project = () => {
   const handleBack = async () => {
     await history.push('/')
     // scrolls to the selected section without pushing to history or having # in the url
-    document.getElementById('projects').scrollIntoView({ block: 'center', behavior: 'smooth' })
+    document.getElementById('projects').scrollIntoView({ block: 'start', behavior: 'smooth' })
   }
 
   return (

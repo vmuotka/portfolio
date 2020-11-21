@@ -45,7 +45,7 @@ const Biography = () => {
         />
         <h2 className='text-3xl text-primary-700 font-medium font-mono'>Vili Muotka</h2>
         <h3>Business Information Technology Student</h3>
-        <a href='https://www.laurea.fi/en/' target='_blank' rel='noreferrer' className='text-blue-600'>Laurea University of Applied Sciences</a>
+        <a href='https://www.laurea.fi/en/' target='_blank' rel='noreferrer'>Laurea University of Applied Sciences</a>
         <div className='flex justify-center space-x-1.5 mt-1.5'>
           {
             links.map((item, index) => <Link key={index} props={item} />)
