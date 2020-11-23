@@ -84,6 +84,3 @@ I have implemented most of the main features, but the project is still ongoing. 
 - rewatch button
 - show details page
 - user bios
-
-Thank you for reading
-Vili Muotka

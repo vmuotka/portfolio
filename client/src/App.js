@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div className='mb-32'>
       <Navigation />
-      <main className='mx-4 text-justify'>
+      <main className='mx-4'>
         <div id='homepage' className='w-full sm:w-4/5 mx-auto'>
           <Switch>
             <Route path='/project/:project_name'>

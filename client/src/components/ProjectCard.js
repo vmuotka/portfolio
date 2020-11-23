@@ -13,15 +13,18 @@ const Project = (props) => {
 
   const [fileExists, setFileExists] = useState(false)
   useEffect(() => {
-    fetch(`/project/${props.title.toLowerCase()}.md`, { method: 'HEAD' })
+    fetch(`/project/${props.title.toLowerCase()}.md`)
       .then(data => {
-        console.log(data)
-        setFileExists(data.ok)
+        return data.text()
+      })
+      .then(text => {
+        // this is a hack to not create error logs to console when the file does not exist
+        setFileExists(!text.includes('<!DOCTYPE html>'))
       })
   }, [setFileExists, props.title])
 
   return (
-    <div className='flex flex-col md:flex-row space-x-6 space-y-6 md:space-y-0'>
+    <div className='flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0'>
       <img className='w-96 shadow self-center' src={props.cover} alt={`cover for project: ${props.title}`} />
       <div className='md:w-2/3 self-center'>
         <h3 className='text-2xl font-semibold'>{props.title}</h3>
@@ -36,7 +39,7 @@ const Project = (props) => {
             rel='noreferrer'
           >
             <GlobeIcon className='h-5 inline mr-1 self-center' />
-            Live
+            Website
           </a>
           <a
             className='text-lg w-min flex text-primary-600 border border-primary-600 hover:bg-primary-600 hover:text-primary-100 font-semibold rounded py-1 px-2'
