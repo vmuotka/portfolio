@@ -38,7 +38,7 @@ const Biography = () => {
         <img
           className='w-52 mx-auto rounded-full mb-4'
           src={profileImg}
-          alt='Vili with his dog'
+          alt='Vili'
         />
         <h2 className='text-3xl text-primary-700 font-medium font-mono'>Vili Muotka</h2>
         <h3>Business Information Technology Student</h3>

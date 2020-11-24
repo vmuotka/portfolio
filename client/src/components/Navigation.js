@@ -24,6 +24,7 @@ const Navigation = () => {
   const history = useHistory()
 
   const handleNav = async (e) => {
+    setShowNav(false)
     location !== '/' && await history.push('/')
 
     // scrolls to the selected section without pushing to history or having # in the url
