@@ -38,6 +38,7 @@ const Project = (props) => {
           {props.details &&
             <Link
               className='text-lg w-min flex text-primary-600 border border-primary-600 hover:bg-primary-600 hover:text-primary-100 font-semibold rounded py-1 px-2'
+              onClick={() => window.scrollTo(0, 0)}
               to={`/project/${props.title.toLowerCase()}`}
             >
               <InfoIcon className='h-5 inline mr-1 self-center' />

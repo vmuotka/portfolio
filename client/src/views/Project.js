@@ -18,7 +18,7 @@ const Project = () => {
     fetch(`./${project_name}.md`)
       .then(data => {
         data.text().then(text => {
-          if (text.includes('<!DOCTYPE html>'))
+          if (text.toLowerCase().includes('<!doctype html>'))
             history.push('/')
 
           setMarkdown(text)
@@ -44,7 +44,7 @@ const Project = () => {
   }
 
   return (
-    <div className='mt-10'>
+    <div>
       <button onClick={handleBack}>
         <span className='hidden md:inline fixed text-primary-500 hover:text-primary-600 mb-6'>
           <ArrowLeftIcon className='h-12' />

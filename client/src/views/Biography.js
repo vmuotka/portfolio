@@ -33,7 +33,7 @@ const Biography = () => {
   ]
 
   return (
-    <div id='biography' className='mt-10 flex flex-col sm:space-x-6 space-y-4 lg:flex-row even:bg-primary-50 text-left'>
+    <div id='biography' className='flex flex-col sm:space-x-6 space-y-4 lg:flex-row even:bg-primary-50 text-left'>
       <div className='w-full lg:w-5/12 text-center text-gray-600 text-xl'>
         <img
           className='w-52 mx-auto rounded-full mb-4'
